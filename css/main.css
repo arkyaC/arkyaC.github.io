@@ -312,7 +312,7 @@ ul.nostyle i {
   margin-top: 40px;
 }
 #cta2 {
-  background: #242a33 url(../images/cta2/cta2-bg.jpg) no-repeat 50% 50%;
+  background: #242a33 url(../images/cta2/cta2-bg-copy.jpg) no-repeat 50% 50%;
   background-size: cover;
   color: #fff;
   padding-top: 70px;
@@ -944,4 +944,110 @@ ul.nostyle i {
 .form-control {
   box-shadow: none;
   -webkit-box-shadow: none;
+}
+
+/* --- Readability fixes for #cta2 hero --- */
+#cta2{
+  position: relative;            /* host a pseudo-element overlay */
+  color: #fff;                   /* default to light text over dark scrim */
+  padding-bottom: 40px;          /* a bit more breathing room */
+}
+#cta2::before{
+  content:"";
+  position:absolute; inset:0;
+  /* Dark-to-less-dark gradient improves contrast across busy photos */
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.3) 0%,
+    rgba(0,0,0,.2) 45%,
+    rgba(0,0,0,.1) 100%
+  );
+  pointer-events:none;
+  z-index:0;
+}
+
+/* Lift visible content above the overlay */
+#cta2 > .container,
+#cta2 .text-left{
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle text shadow for extra legibility without looking fuzzy */
+#cta2 h2, #cta2 p, #cta2 a{
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+/* Replace <font> with a reusable accent class */
+.ac-accent, .ac-accent a{ color:#BE1414; }
+
+/* Mobile: make the scrim a bit stronger for tiny, bright screens */
+@media (max-width: 640px){
+  #cta2::before{
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,.4) 0%,
+      rgba(0,0,0,.3) 45%,
+      rgba(0,0,0,.2) 100%
+    );
+  }
+  #cta2 h2{ font-size: clamp(1.6rem, 5vw, 2.2rem); }
+  #cta2 p { font-size: clamp(1rem, 3.5vw, 1.05rem); }
+}
+
+/* Frosted/blur card—pairs well with the scrim */
+.cta2-card{
+  height: 275px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical centering of your h2/p */
+  display: inline-block;       /* keeps left alignment */
+  background: rgba(200,200,200,.55);             /* fallback */
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  backdrop-filter: blur(6px) saturate(120%);  /* modern browsers */
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 14px;
+  /* padding: 1rem 1.25rem; */
+  padding: clamp(.75rem, 2vw, 1.25rem) clamp(1rem, 3vw, 1.75rem);
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  max-width: 42rem;            /* avoids super-wide lines */
+}
+
+/* On small screens, guarantee high contrast */
+@media (max-width: 640px){
+  .cta2-card{
+    height: 200px;
+    padding: .75rem 1rem;
+    border:none;
+    box-shadow: 0 10px 24px rgba(0,0,0,.35);
+  }
+  /* Tighter heading and paragraph rhythm */
+  #cta2 h2{
+    line-height: 1.75;
+    margin: 0 0 .35rem;
+    font-size: clamp(3rem, 5vw, 5rem);
+  }
+  #cta2 p{
+    line-height: 1.75;         /* was effectively higher */
+    margin: .15rem 0;          /* override Bootstrap's default */
+    font-size: clamp(1.0rem, 3.3vw, 1.5rem);
+  }
+
+  /* Remove manual spacer paragraphs on mobile */
+  #cta2 .bottom-one,
+  #cta2 .bottom-five{
+    display: none !important;
+  }
+}
+
+#cta2{
+  /* keep your existing background rules */
+  min-height: clamp(360px, 60vh, 680px);   /* shorter on huge screens */
+  padding-top: 70px;                       /* you already have this */
+}
+@media (min-width: 1200px){
+  #cta2{ min-height: 520px; }              /* tune as you like */
+}
+#cta2{
+  background-position: center 30%;  /* try 20–40% instead of dead center */
 }
