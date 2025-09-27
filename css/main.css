@@ -973,11 +973,6 @@ ul.nostyle i {
   z-index: 1;
 }
 
-/* Subtle text shadow for extra legibility without looking fuzzy */
-#cta2 h2, #cta2 p, #cta2 a{
-  text-shadow: 0 1px 2px rgba(0,0,0,.6);
-}
-
 /* Replace <font> with a reusable accent class */
 .ac-accent, .ac-accent a{ color:#BE1414; }
 
