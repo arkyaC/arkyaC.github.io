@@ -956,12 +956,12 @@ ul.nostyle i {
   content:"";
   position:absolute; inset:0;
   /* Dark-to-less-dark gradient improves contrast across busy photos */
-  background: linear-gradient(
+  /*background: linear-gradient(
     to bottom,
     rgba(0,0,0,.3) 0%,
     rgba(0,0,0,.2) 45%,
     rgba(0,0,0,.1) 100%
-  );
+  );*/
   pointer-events:none;
   z-index:0;
 }
@@ -979,12 +979,12 @@ ul.nostyle i {
 /* Mobile: make the scrim a bit stronger for tiny, bright screens */
 @media (max-width: 640px){
   #cta2::before{
-    background: linear-gradient(
+    /*background: linear-gradient(
       to bottom,
       rgba(0,0,0,.4) 0%,
       rgba(0,0,0,.3) 45%,
       rgba(0,0,0,.2) 100%
-    );
+    );*/
   }
   #cta2 h2{ font-size: clamp(1.6rem, 5vw, 2.2rem); }
   #cta2 p { font-size: clamp(1rem, 3.5vw, 1.05rem); }
