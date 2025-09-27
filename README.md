@@ -1,5 +1,7 @@
 # Arkya Chatterjee
 
+![Profile Picture](images/dp.jpeg)
+
 ## About Me
 
 I am a Research Assistant Professor (postdoc) at the C.N. Yang Institute for Theoretical Physics at Stony Brook University. My research explores nonperturbative aspects of quantum many-body physics. In recent work, I have used new kinds of symmetries and anomalies to find unexplored connections between the worlds of quantum lattice models and quantum field theory. I also maintain a general interest in applications of statistical physics in studying emergent phenomena in complex systems. In the past, I have explored this interest in topics such as cellular growth, self-organized collective motion, and the life and death of internet memes.
