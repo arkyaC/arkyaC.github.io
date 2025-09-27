@@ -14,4 +14,4 @@ My research aims to uncover organizing principles behind the rich landscape of q
 
 ## Contact
 
-I am always looking for fellow explorers in the world of quantum many body physics, so please email me at arkya.chatterjee@stonybrook.edu if you are interested in discussing and exploring together.
+I am always looking for fellow explorers in the world of quantum many body physics, so please email me at arkya[dot]chatterjee[at]stonybrook[dot]edu if you are interested in discussing and exploring together.
