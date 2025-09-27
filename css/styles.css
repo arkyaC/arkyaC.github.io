@@ -1,0 +1,39 @@
+/*
+Template Name: HR2 - Template
+Version: 1.0
+Author: HostingRed SAS
+Author URL: http://hostingred.com
+*/
+/*******************************************
+USE THIS FILE TO INCLUDE YOUR OWN CSS STYLES
+********************************************/
+
+.bottom-one {
+    margin-bottom: 1cm;
+}
+
+.bottom-three {
+    margin-bottom: 3cm;
+}
+
+.bottom-five {
+    margin-bottom: 5cm;
+}
+
+.fig-center-small {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.fig-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+img {
+    border-radius: 8px;
+}
